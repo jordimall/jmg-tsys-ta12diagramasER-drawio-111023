@@ -1,8 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-10-12T06:05:44.288Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60" etag="NKJY5EHhKhbvQDvYZY7A" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-12T06:10:03.985Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60" etag="K5wClZOG9FMP1QTi46Og" version="22.0.4" type="github">
   <diagram name="Página-1" id="GGuaCN20DpNZ9yj8Dpp0">
     <mxGraphModel dx="2213" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
+        <object label="" StyleMaza="" id="0">
+          <mxCell />
+        </object>
         <mxCell id="1" parent="0" />
         <mxCell id="nZIubDTmoYv-M2Z3KSqX-1" value="Persona" style="whiteSpace=wrap;html=1;align=center;fillStyle=auto;rounded=1;shadow=1;glass=0;strokeColor=default;labelBorderColor=none;labelBackgroundColor=none;fontSize=14;fontFamily=Comic Sans MS;" vertex="1" parent="1">
           <mxGeometry x="-90" y="390" width="100" height="40" as="geometry" />
