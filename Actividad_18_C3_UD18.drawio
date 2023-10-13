@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-13T16:29:52.983Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="pDYdZjrXjKumz_a0w1SF" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-13T16:32:18.026Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="uGccBiqZ_daiq1ZX2Tvw" version="22.0.4" type="github">
   <diagram name="Página-1" id="a1RyxE_Y-MSOX4j9OYDZ">
-    <mxGraphModel dx="2514" dy="2051" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3046" dy="2129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -17,16 +17,16 @@
           <mxGeometry x="821" y="320" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8C2Y239VdLHNd9cbPgNQ-7" value="Codigo_inmueble" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" parent="1" vertex="1">
-          <mxGeometry x="901" y="-310" width="100" height="40" as="geometry" />
+          <mxGeometry x="860" y="-310" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8C2Y239VdLHNd9cbPgNQ-9" value="Metros" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="1150" y="-90" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8C2Y239VdLHNd9cbPgNQ-10" value="Descripcion" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="1141" y="-270" width="100" height="40" as="geometry" />
+          <mxGeometry x="1160" y="-220" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8C2Y239VdLHNd9cbPgNQ-11" value="Direccion" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="1011" y="-310" width="100" height="40" as="geometry" />
+          <mxGeometry x="1050" y="-310" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8C2Y239VdLHNd9cbPgNQ-12" value="Codigo_especial" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="1071" y="440" width="100" height="40" as="geometry" />
