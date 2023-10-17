@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-17T06:50:01.373Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.46" etag="5B9cx3v_jT56_z--Use2" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-17T06:50:58.623Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.46" etag="cGV48sVRu3KulJvRdU0D" version="22.0.4" type="github">
   <diagram name="Página-1" id="GGuaCN20DpNZ9yj8Dpp0">
     <mxGraphModel dx="2006" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -284,7 +284,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="v9k_mlNCrv3lM9yxqVJo-1" value="&lt;font&gt;&lt;font&gt;Pesrsona ( &lt;b&gt;Codigo_Socio :String&lt;/b&gt;, DIN : String, Direccion : String, Nombre: String, Telefono : int)&lt;br&gt;Prestamo (&lt;b&gt;ID :String, &lt;/b&gt;Fecha_incio : date, Fecha_fianl_prestamo : date, Fecha_real_Entrega : date, &lt;i&gt;Codigo_Socio_FK&lt;/i&gt;)&lt;br&gt;Volumen (ID : String , Estado : int )&lt;br&gt;Libro (&lt;b&gt;ISBN String &lt;/b&gt;, Editorial, String , Anio_escritura ;date , Autor : String, titulo :String, Anio Edicion : date , &lt;i&gt;ID_Volumen_FK&lt;/i&gt;)&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#dbdbdb;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;horizontal=1;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="370" y="570" width="750" height="80" as="geometry" />
+          <mxGeometry x="340" y="570" width="750" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
