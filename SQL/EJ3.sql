@@ -6,7 +6,7 @@ USE EJ3;
 
 CREATE TABLE comunidad_autonoma (
   nombre VARCHAR(120) ,
-  auperficie INT NOT NULL,
+  superficie INT NOT NULL,
   poblacion INT NOT NULL,
   PRIMARY KEY (nombre)
 );
