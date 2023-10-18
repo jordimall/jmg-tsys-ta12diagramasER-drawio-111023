@@ -4,10 +4,10 @@ CREATE DATABASE IF NOT EXISTS EJ5;
 USE EJ5;
 
 CREATE TABLE almacenes (
-  numero INT auto_increment,
+  numero INT auto_increment PRIMARY KEY,
   descripcion VARCHAR(255) NOT NULL,
   direccion VARCHAR(255) NOT NULL,
-  PRIMARY KEY (numero)
+  UNIQUE (descripcion, direccion) # Evitamos la duplicidad
 );
 
 CREATE TABLE estanteria (
@@ -15,7 +15,8 @@ CREATE TABLE estanteria (
   nombre VARCHAR(100) NOT NULL,
   almacen_id INT NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (almacen_id) REFERENCES almacenes (numero)
+  FOREIGN KEY (almacen_id) REFERENCES almacenes (numero),
+  UNIQUE (nombre, almacen_id) # Evitamos la duplicidad
 );
 
 CREATE TABLE pieza (
