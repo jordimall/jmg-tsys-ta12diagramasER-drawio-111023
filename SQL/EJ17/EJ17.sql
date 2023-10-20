@@ -1,3 +1,5 @@
+drop database if exists EJ17;
+
 create database EJ17;
 
 use EJ17;
@@ -92,7 +94,7 @@ CREATE TABLE infoProfesorN (
         REFERENCES profesor (numSeguridadSocial)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
-CREATE TABLE asiganr (
+CREATE TABLE asignar (
     IDHorario INT,
     IDProfesor VARCHAR(50),
     PRIMARY KEY (IDHorario , IDProfesor),

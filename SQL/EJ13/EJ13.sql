@@ -1,3 +1,5 @@
+DROP DATABASE if exists EJ13;
+
 CREATE DATABASE EJ13;
 
 USE EJ13;
@@ -43,7 +45,7 @@ CREATE TABLE ayudar (
 );
 
 CREATE TABLE plato (
-    ID INT,
+    ID INT auto_increment,
     precio DOUBLE NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     descripcion VARCHAR(200),
