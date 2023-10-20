@@ -310,8 +310,6 @@ SELECT * FROM pago_alquiler WHERE IDAlquiler IN('ALQ-003', 'ALQ-004', 'ALQ-005')
 
 UPDATE pago_alquiler SET valor_pago = 950.00, mes = 3, anio = 2024 WHERE IDAlquiler = 'ALQ-003';
 UPDATE pago_alquiler SET valor_pago = 200.00 WHERE IDAlquiler = 'ALQ-004';
-UPDATE pago_alquiler SET mes = -1 WHERE IDAlquiler = 'ALQ-005';
-UPDATE pago_alquiler SET anio = 3000 WHERE IDAlquiler = 'ALQ-005';
 
 SELECT * FROM pago_alquiler WHERE IDAlquiler IN('ALQ-003', 'ALQ-004', 'ALQ-005');
 
@@ -319,3 +317,8 @@ DELETE FROM pago_alquiler WHERE IDAlquiler = 'ALQ-003';
 DELETE FROM pago_alquiler WHERE IDAlquiler = 'ALQ-004';
 
 SELECT * FROM pago_alquiler WHERE IDAlquiler IN('ALQ-003', 'ALQ-004');
+
+/* Saltar el check */
+
+UPDATE pago_alquiler SET mes = -1 WHERE IDAlquiler = 'ALQ-005';
+UPDATE pago_alquiler SET anio = 3000 WHERE IDAlquiler = 'ALQ-005';
