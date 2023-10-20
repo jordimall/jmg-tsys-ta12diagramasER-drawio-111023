@@ -1,4 +1,4 @@
--- drop database EJ3;
+drop database if exists EJ3;
 
 CREATE DATABASE IF NOT EXISTS EJ3;
 
@@ -12,7 +12,7 @@ CREATE TABLE comunidad_autonoma (
 );
 
 CREATE TABLE provincia (
-  codigo_provincial VARCHAR(32) NOT NULL,
+  codigo_provincial INT auto_increment,
   nombre VARCHAR(120) NOT NULL,
   superficie INT NOT NULL,
   poblacion INT NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE localidad (
   id_localidad VARCHAR(32),
   nombre VARCHAR(120) NOT NULL,
   poblacion INT NOT NULL,
-  provincia VARCHAR(32) NOT NULL,
+  provincia INT NOT NULL,
   FOREIGN KEY (provincia) REFERENCES provincia (codigo_provincial)  on delete cascade on update cascade,
   PRIMARY KEY (id_localidad)
 );
@@ -34,7 +34,7 @@ CREATE TABLE localidad (
 
 CREATE TABLE capital_provincia (
   CA VARCHAR(120),
-  PV VARCHAR(32),
+  PV INT,
   FOREIGN KEY (CA) REFERENCES comunidad_autonoma (nombre) on delete cascade on update cascade,
   FOREIGN KEY (PV) REFERENCES provincia (codigo_provincial)  on delete cascade on update cascade,
   PRIMARY KEY (CA, PV)
@@ -43,7 +43,7 @@ CREATE TABLE capital_provincia (
 
 CREATE TABLE capital_ciudad (
   CC VARCHAR(32) ,
-  PV VARCHAR(32) ,
+  PV INT ,
   FOREIGN KEY (CC) REFERENCES localidad (id_localidad)  on delete cascade on update cascade,
   FOREIGN KEY (PV) REFERENCES provincia (codigo_provincial) on delete cascade on update cascade,
   PRIMARY KEY (CC, PV)
