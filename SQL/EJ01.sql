@@ -1,4 +1,4 @@
- -- drop database EJ1;
+-- drop database EJ1;
 
 CREATE DATABASE IF NOT EXISTS EJ1;
 USE EJ1;
@@ -37,7 +37,7 @@ CREATE TABLE libro (
 );
 
 CREATE TABLE prestamo (
-  id VARCHAR(36),
+  id VARCHAR(9),
   fecha_inicio date NOT NULL,
   fecha_final_prestamo date,
   fecha_real_entrega date ,
@@ -46,5 +46,5 @@ CREATE TABLE prestamo (
   FOREIGN KEY (ref_persona) REFERENCES persona (dni) on delete cascade on update cascade,
   FOREIGN KEY (isbn) REFERENCES libro (isbn) on delete cascade on update cascade,
   PRIMARY KEY (id),
-  CHECK (fecha_final_prestamo  <= fecha_inicio )
+  CHECK (fecha_final_prestamo >= fecha_inicio )
 );

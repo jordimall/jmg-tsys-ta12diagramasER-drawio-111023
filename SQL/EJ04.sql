@@ -10,7 +10,7 @@ CREATE TABLE guerra (
   any_finalizacion INT,
   PRIMARY KEY (id_guerra),
   CHECK (any_inicio  <= any_finalizacion ), 
-  UNIQUE (nombre, any_inicio , any_finalizacion) # Evitamos la duplicidad en caso de introducir el id_guerra MAL
+  UNIQUE (nombre, any_inicio , any_finalizacion) 
 );
 
 CREATE TABLE bando (
