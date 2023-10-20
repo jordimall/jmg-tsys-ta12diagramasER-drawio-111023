@@ -1,6 +1,8 @@
-create database EJ15;
+DROP DATABASE if exists EJ15;
 
-use EJ15;
+CREATE DATABASE EJ15;
+
+USE EJ15;
 
 CREATE TABLE plato (
     ID INT AUTO_INCREMENT,

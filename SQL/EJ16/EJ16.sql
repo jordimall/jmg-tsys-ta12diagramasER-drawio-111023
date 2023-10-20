@@ -1,3 +1,5 @@
+drop database if exists EJ16;
+
 create database EJ16;
 
 use EJ16;
@@ -10,6 +12,7 @@ CREATE TABLE usuario (
     fechaCreacion DATE,
     PRIMARY KEY (nombreUsuario)
 );
+
 CREATE TABLE seguir (
     IDUsuario VARCHAR(100),
     IDUsuarioSeguir VARCHAR(100),
@@ -21,6 +24,7 @@ CREATE TABLE seguir (
         REFERENCES usuario (nombreUsuario)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
+
 CREATE TABLE tweet (
     ID INT AUTO_INCREMENT,
     texto VARCHAR(1000),
@@ -32,8 +36,9 @@ CREATE TABLE tweet (
         PRIMARY KEY (ID),
     FOREIGN KEY (IDUsuario)
         REFERENCES usuario (nombreUsuario)
-        ON UPDATE CASCADE ON DELETE CASCADE,
+        ON UPDATE CASCADE ON DELETE CASCADE
 );
+
 CREATE TABLE compartir (
     IDUsuario VARCHAR(100),
     IDTweet INT,
@@ -45,6 +50,7 @@ CREATE TABLE compartir (
         REFERENCES tweet (ID)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
+
 CREATE TABLE darLike (
     IDUsuario VARCHAR(100),
     IDTweet INT,
@@ -56,6 +62,7 @@ CREATE TABLE darLike (
         ON UPDATE CASCADE ON DELETE CASCADE,
     PRIMARY KEY (IDUsuario , IDTweet)
 );
+
 CREATE TABLE comentario (
     ID INT AUTO_INCREMENT,
     contenido VARCHAR(100) NOT NULL,
@@ -70,6 +77,7 @@ CREATE TABLE comentario (
         REFERENCES tweet (ID)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
+
 CREATE TABLE hashtag (
     ID INT AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
@@ -79,6 +87,7 @@ CREATE TABLE hashtag (
         REFERENCES usuario (nombreUsuario)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
+
 CREATE TABLE asociar (
     IDHasthag INT,
     IDTweet INT,
