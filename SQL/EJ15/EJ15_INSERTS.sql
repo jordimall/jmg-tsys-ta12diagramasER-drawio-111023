@@ -72,7 +72,7 @@ INSERT INTO ofrecer (IDMenu, IDDia, cantidad) VALUES
 (9, 9, 90),
 (10, 10, 100);
 
--- SELECT:
+/* SELECT */
 
 SELECT * FROM plato WHERE tipo = 'tipo1';
 SELECT * FROM menu WHERE contarPersonas = 2;
@@ -80,7 +80,7 @@ SELECT * FROM plato p JOIN componer c ON p.ID = c.IDPlato WHERE c.IDMenu = 1;
 SELECT * FROM dia WHERE temperatura = 15.5;
 SELECT * FROM menu m JOIN ofrecer o ON m.ID = o.IDMenu WHERE o.IDDia = 1;
 
--- UPDATE: 
+/* UPDATE */
 
 UPDATE plato SET descripcio = 'Nueva descripción' WHERE ID = 1;
 UPDATE menu SET contarPersonas = 3 WHERE ID = 1;
@@ -88,7 +88,7 @@ UPDATE componer SET IDMenu = 2 WHERE IDPlato = 1 AND IDMenu = 1;
 UPDATE dia SET temperatura = 16.0 WHERE ID = 1;
 UPDATE ofrecer SET cantidad = 20 WHERE IDMenu = 1 AND IDDia = 1;
 
--- DELETE: 
+/* DELETE */
 
 DELETE FROM plato WHERE ID = 1;
 DELETE FROM menu WHERE ID = 1;

@@ -123,15 +123,14 @@ INSERT INTO necesitar (IDPlato, IDIngrediente) VALUES
 (8, 9);  
 
 
-
+/* select */
 SELECT * FROM empleado;
-
 SELECT * FROM plato WHERE precio > 10.00;
 
+/* update */
 UPDATE empleado SET telefonoMovil = '9876543210' WHERE DNI = '123456789';
-
 UPDATE plato SET precio = 11.99 WHERE ID = 2;
 
+/* delete */
 DELETE FROM empleado WHERE DNI = '234567890';
-
 DELETE FROM plato WHERE ID = 3;
