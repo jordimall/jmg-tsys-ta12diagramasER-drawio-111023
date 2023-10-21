@@ -1,65 +1,65 @@
-drop database organigrama;
+drop database if exists organigrama;
 
-create database organigrama;
+create database if not exists organigrama;
 
 use organigrama;
 
 CREATE TABLE empleado (
-    DNI VARCHAR(9),
-    nombre VARCHAR(20) not null,
+    dni VARCHAR(9),
+    nombre VARCHAR(20) NOT NULL,
     apellidos VARCHAR(40),
     direccion VARCHAR(50),
     num_SS VARCHAR(12),
-    codigo_trabajador VARCHAR(20) not null unique,
+    codigo_trabajador VARCHAR(20) NOT NULL UNIQUE,
     telefono VARCHAR(9),
     jefe VARCHAR(9),
     FOREIGN KEY (jefe)
-        REFERENCES empleado (DNI)
+        REFERENCES empleado (dni)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (DNI)
+    PRIMARY KEY (dni)
 );
 
 CREATE TABLE departamento (
-    ID_departamento int auto_increment,
-    nombre VARCHAR(20) not null,
+    id_departamento INT AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
     coordinador VARCHAR(9),
     FOREIGN KEY (coordinador)
-        REFERENCES empleado (DNI)
+        REFERENCES empleado (dni)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (ID_departamento)
+    PRIMARY KEY (id_departamento)
 );
 
 CREATE TABLE contrato (
-    ID_contrato int auto_increment,
-    categoria VARCHAR(20),
-    fecha_inicio date,
-    fecha_final date,
+    id_contrato INT AUTO_INCREMENT,
+    categoria VARCHAR(50),
+    fecha_inicio DATE,
+    fecha_final DATE,
     empleado VARCHAR(9),
     FOREIGN KEY (empleado)
-        REFERENCES empleado (DNI)
+        REFERENCES empleado (dni)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (ID_contrato)
+    PRIMARY KEY (id_contrato)
 );
 
 CREATE TABLE nomina (
-    ID_nomina int auto_increment,
-    fecha date,
-    salario int,
-    contrato int,
+    id_nomina INT AUTO_INCREMENT,
+    fecha DATE,
+    salario INT,
+    contrato INT,
     FOREIGN KEY (contrato)
-        REFERENCES contrato (ID_contrato)
+        REFERENCES contrato (id_contrato)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (ID_nomina)
+    PRIMARY KEY (id_nomina)
 );
 
 CREATE TABLE trabaja (
-    empleado varchar(9),
-    departamento int,
+    empleado VARCHAR(9),
+    departamento INT,
     FOREIGN KEY (empleado)
-        REFERENCES empleado (DNI)
+        REFERENCES empleado (dni)
         ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (departamento)
-        REFERENCES departamento (ID_departamento)
+        REFERENCES departamento (id_departamento)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (empleado, departamento)
+    PRIMARY KEY (empleado , departamento)
 );

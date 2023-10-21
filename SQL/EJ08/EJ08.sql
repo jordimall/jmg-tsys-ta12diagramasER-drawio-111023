@@ -1,6 +1,6 @@
-drop database vuelos;
+drop database if exists vuelos;
 
-create database vuelos;
+create database if not exists vuelos;
 
 use vuelos;
 
@@ -40,7 +40,7 @@ CREATE TABLE aeropuerto (
 );
 
 CREATE TABLE vuelo (
-    codigo_vuelo VARCHAR(20),
+    codigo_vuelo INT AUTO_INCREMENT,
     hora_salida time,
     hora_llegada time,
     avion VARCHAR(10),
