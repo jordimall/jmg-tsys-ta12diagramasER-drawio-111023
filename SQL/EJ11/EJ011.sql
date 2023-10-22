@@ -1,11 +1,11 @@
-drop database accidentesGeograficos;
+drop database if exists accidentesGeograficos;
 
-create database accidentesGeograficos;
+create database if not exists accidentesGeograficos;
 
 use accidentesGeograficos;
 
 CREATE TABLE accidente_geografico (
-    id_accidente VARCHAR(20),
+    id_accidente INT AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     eje_horizontal DOUBLE,
     eje_vertical DOUBLE,
@@ -20,14 +20,14 @@ CREATE TABLE pais (
 );
 
 CREATE TABLE localidad (
-    id_localidad VARCHAR(20),
+    id_localidad INT AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     extension DOUBLE,
     PRIMARY KEY (id_localidad)
 );
 
 CREATE TABLE montana (
-    id_accidente VARCHAR(20),
+    id_accidente INT,
     altura DOUBLE,
     FOREIGN KEY (id_accidente)
         REFERENCES accidente_geografico (id_accidente)
@@ -36,7 +36,7 @@ CREATE TABLE montana (
 );
 
 CREATE TABLE lago (
-    id_accidente VARCHAR(20),
+    id_accidente INT,
     extension DOUBLE,
     FOREIGN KEY (id_accidente)
         REFERENCES accidente_geografico (id_accidente)
@@ -45,7 +45,7 @@ CREATE TABLE lago (
 );
 
 CREATE TABLE rio (
-    id_accidente VARCHAR(20),
+    id_accidente INT,
     longitud DOUBLE,
     FOREIGN KEY (id_accidente)
         REFERENCES accidente_geografico (id_accidente)
@@ -54,7 +54,7 @@ CREATE TABLE rio (
 );
 
 CREATE TABLE ubicar (
-    accidente VARCHAR(20),
+    accidente INT,
     pais VARCHAR(50),
     FOREIGN KEY (accidente)
         REFERENCES accidente_geografico (id_accidente)
@@ -66,8 +66,8 @@ CREATE TABLE ubicar (
 );
 
 CREATE TABLE transcurrir (
-    rio VARCHAR(20),
-    localidad VARCHAR(20),
+    rio INT,
+    localidad INT,
     FOREIGN KEY (rio)
         REFERENCES rio (id_accidente)
         ON DELETE CASCADE ON UPDATE CASCADE,
