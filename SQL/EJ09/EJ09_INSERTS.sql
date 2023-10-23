@@ -97,7 +97,6 @@ insert into necesitar (paso, ingrediente, tipo_medida, cantidad) values (9, 4, '
 insert into necesitar (paso, ingrediente, tipo_medida, cantidad) values (2, 7, 'onzas', 8.7);
 insert into necesitar (paso, ingrediente, tipo_medida, cantidad) values (3, 7, 'pizcas', 6.2);
 
-select * from necesitar, paso, ingrediente where necesitar.ingrediente = ingrediente.id_ingrediente and necesitar.paso = paso.id_paso;
 
 -- muestra todos los pasos a seguir para cada receta guardada en la base de datos
 select * from requerir, paso, receta where requerir.receta = receta.id_receta and requerir.paso = paso.id_paso;
