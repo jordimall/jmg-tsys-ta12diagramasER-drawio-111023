@@ -9,8 +9,6 @@ insert into receta (nombre, tipo, dificultad) values ('Tacos de pollo', 'Entrant
 insert into receta (nombre, tipo, dificultad) values ('Tarta de limón', 'Postre', 'Dificil');
 insert into receta (nombre, tipo, dificultad) values ('Mousse de mango', 'Principal', 'Muy facil');
 
-select * from receta;
-
 insert into paso (descripcion) values ('Dejar enfriar antes de desmoldar');
 insert into paso (descripcion) values ('Pelar y cortar las papas en rodajas');
 insert into paso (descripcion) values ('Refrigerar durante al menos 4 horas');
@@ -26,8 +24,6 @@ insert into paso (descripcion) values ('Añadir el caldo y dejar cocinar a fuego
 insert into paso (descripcion) values ('Agregar la mantequilla derretida a la mezcla');
 insert into paso (descripcion) values ('Decorar con frutas frescas antes de servir');
 
-select * from paso;
-
 insert into utensilio (nombre) values ('espátula de silicona');
 insert into utensilio (nombre) values ('tabla de cortar');
 insert into utensilio (nombre) values ('colador de malla fina');
@@ -38,8 +34,6 @@ insert into utensilio (nombre) values ('balanza');
 insert into utensilio (nombre) values ('pinzas');
 insert into utensilio (nombre) values ('pelador de ajos');
 insert into utensilio (nombre) values ('cuenco');
-
-select * from utensilio;
 
 insert into tipo_ingrediente (nombre) values ('especias');
 insert into tipo_ingrediente (nombre) values ('pescados');
@@ -52,8 +46,6 @@ insert into tipo_ingrediente (nombre) values ('verduras');
 insert into tipo_ingrediente (nombre) values ('frutas');
 insert into tipo_ingrediente (nombre) values ('carnes');
 
-select * from tipo_ingrediente;
-
 insert into ingrediente (nombre, tipo) values ('arroz', 3);
 insert into ingrediente (nombre, tipo) values ('leche', 6);
 insert into ingrediente (nombre, tipo) values ('zanahoria', 8);
@@ -65,8 +57,6 @@ insert into ingrediente (nombre, tipo) values ('manzana', 9);
 insert into ingrediente (nombre, tipo) values ('lubina', 2);
 insert into ingrediente (nombre, tipo) values ('langostino', 4);
 insert into ingrediente (nombre, tipo) values ('lechuga', 8);
-
-select * from ingrediente;
 
 insert into requerir (receta, paso) values (1, 12);
 insert into requerir (receta, paso) values (1, 8);
@@ -85,8 +75,6 @@ insert into requerir (receta, paso) values (9, 2);
 insert into requerir (receta, paso) values (9, 6);
 insert into requerir (receta, paso) values (10, 9);
 
-select * from requerir, paso, receta where requerir.receta = receta.id_receta and requerir.paso = paso.id_paso;
-
 insert into utilizar (paso, utensilio) values (5, 2);
 insert into utilizar (paso, utensilio) values (5, 9);
 insert into utilizar (paso, utensilio) values (1, 6);
@@ -97,8 +85,6 @@ insert into utilizar (paso, utensilio) values (8, 8);
 insert into utilizar (paso, utensilio) values (3, 7);
 insert into utilizar (paso, utensilio) values (14, 4);
 insert into utilizar (paso, utensilio) values (2, 3);
-
-select * from utilizar, paso, utensilio where utilizar.utensilio = utensilio.id_utensilio and utilizar.paso = paso.id_paso;
 
 insert into necesitar (paso, ingrediente, tipo_medida, cantidad) values (2, 3, 'cucharaditas', 4.8);
 insert into necesitar (paso, ingrediente, tipo_medida, cantidad) values (7, 8, 'litros', 3.8);
@@ -112,3 +98,21 @@ insert into necesitar (paso, ingrediente, tipo_medida, cantidad) values (2, 7, '
 insert into necesitar (paso, ingrediente, tipo_medida, cantidad) values (3, 7, 'pizcas', 6.2);
 
 select * from necesitar, paso, ingrediente where necesitar.ingrediente = ingrediente.id_ingrediente and necesitar.paso = paso.id_paso;
+
+-- muestra todos los pasos a seguir para cada receta guardada en la base de datos
+select * from requerir, paso, receta where requerir.receta = receta.id_receta and requerir.paso = paso.id_paso;
+
+-- actualiza el tipo de plato para la receta del flan de caramelo
+update receta set tipo = 'Postre' where nombre = 'Flan de caramelo';
+
+-- elimina un paso de la receta de flan de caramelo
+delete from requerir where receta = 1 and paso = 4;
+
+-- muestra los pasos que usan utensilios y cuales usan
+select * from utilizar, paso, utensilio where utilizar.utensilio = utensilio.id_utensilio and utilizar.paso = paso.id_paso;
+
+-- cambia el nombre del utensilio 'balanza'
+update utensilio set nombre = 'nevera' where nombre = 'balanza';
+
+-- elimina el ingrediente 'arroz'
+delete from ingrediente where nombre = 'arroz';

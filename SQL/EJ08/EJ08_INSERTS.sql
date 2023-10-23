@@ -84,3 +84,12 @@ update avion set num_plazas = num_plazas+200 where num_plazas < 450;
 
 -- eliminar el avion con menos plazas
 delete from avion order by num_plazas limit 1;
+
+-- muestra la tarjeta de embarque del cliente con dni 45447086L
+select * from tarjeta_embarque where cliente = '45447086L';
+
+-- cambia el piso asociado a la tarjeta de embarque del cliente con dni 45447086L
+update tarjeta_embarque set piso_asiento = 3 where cliente = '45447086L';
+
+-- elimina la tarjeta de embarque del cliente con dni 45447086L
+delete from tarjeta_embarque where cliente = '45447086L';
