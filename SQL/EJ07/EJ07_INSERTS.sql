@@ -8,6 +8,11 @@ insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajad
 insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('80941377V', 'Cherise', 'Pelfer', '45 Heffernan Crossing', '826-56-0159', '19-1332045', '605607562', '52856433C');
 insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('92365447Y', 'Jehu', 'Stegers', '137 Hanover Center', '205-66-9555', '84-3374708', '621391468', '95019275C');
 insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('14407313W', 'Kenneth', 'Huggan', '4085 Lukken Center', '336-56-5773', '47-5318254', '635044836', '43309039D');
+insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('98403531D', 'Vidovik', 'O''dell', '0 Stang Trail', '530-28-0451', '19-6537900', '649305984', '43309039D');
+insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('43607872S', 'Em', 'Fache', '644 Ryan Court', '722-51-0204', '17-9622290', '642123784', '43309039D');
+insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('69838924M', 'Hube', 'Glen', '2322 Loftsgordon Court', '671-65-2328', '42-5352598', '662463177', '43309039D');
+insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('84914538F', 'Nisse', 'Fairpool', '9 Rutledge Terrace', '887-46-8020', '08-6295238', '633350432', '43309039D');
+insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('17184708R', 'Salomi', 'Verissimo', '43500 Del Sol Parkway', '570-41-6878', '74-5372189', '639785362', '43309039D');
 
 select * from empleado;
 
@@ -35,6 +40,11 @@ insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('C
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Executive Secretary', '2021-10-23', null, '92365447Y');
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Office Assistant III', '2020-08-10', null, '14407313W');
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Sales Representative', '2025-03-01', null, '52042543W');
+insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2021-06-21', null, '98403531D');
+insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2022-05-11', null, '43607872S');
+insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2023-07-31', null, '69838924M');
+insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2024-02-15', null, '84914538F');
+insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2025-04-09', null, '17184708R');
 
 select * from contrato;
 
@@ -49,6 +59,29 @@ insert into nomina (fecha, salario, contrato) values ('2020-04-01', 5000, 8);
 insert into nomina (fecha, salario, contrato) values ('2023-06-01', 2500, 9);
 insert into nomina (fecha, salario, contrato) values ('2021-12-01', 1500, 10);
 insert into nomina (fecha, salario, contrato) values ('2022-01-01', 2000, 10);
-insert into nomina (fecha, salario, contrato) values ('2022-03-01', 2000, 10);
+insert into nomina (fecha, salario, contrato) values ('2022-03-01', 2000, 11);
+insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 12);
+insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 13);
+insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 14);
+insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 15);
+insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 16);
 
 select * from nomina;
+
+insert into trabaja (empleado, departamento) values ('52856433C', '1');
+insert into trabaja (empleado, departamento) values ('07349694Y', '2');
+insert into trabaja (empleado, departamento) values ('52042543W', '3');
+insert into trabaja (empleado, departamento) values ('43309039D', '4');
+insert into trabaja (empleado, departamento) values ('52511561E', '5');
+insert into trabaja (empleado, departamento) values ('95019275C', '6');
+insert into trabaja (empleado, departamento) values ('69401067O', '7');
+insert into trabaja (empleado, departamento) values ('80941377V', '8');
+insert into trabaja (empleado, departamento) values ('92365447Y', '9');
+insert into trabaja (empleado, departamento) values ('14407313W', '10');
+insert into trabaja (empleado, departamento) values ('98403531D', '4');
+insert into trabaja (empleado, departamento) values ('43607872S', '4');
+insert into trabaja (empleado, departamento) values ('69838924M', '4');
+insert into trabaja (empleado, departamento) values ('84914538F', '4');
+insert into trabaja (empleado, departamento) values ('17184708R', '4');
+
+select * from trabaja;

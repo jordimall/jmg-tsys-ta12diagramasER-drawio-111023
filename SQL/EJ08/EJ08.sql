@@ -41,7 +41,9 @@ CREATE TABLE aeropuerto (
 
 CREATE TABLE vuelo (
     codigo_vuelo INT AUTO_INCREMENT,
+    fecha_salida date,
     hora_salida time,
+    fecha_llegada date,
     hora_llegada time,
     avion VARCHAR(10),
     aeropuerto_salida VARCHAR(10),
@@ -78,7 +80,7 @@ CREATE TABLE embarca (
     tarjeta_fila INT,
     tarjeta_columna VARCHAR(1),
     tarjeta_piso INT,
-    vuelo VARCHAR(20),
+    vuelo INT,
     FOREIGN KEY (tarjeta_fila , tarjeta_columna , tarjeta_piso)
         REFERENCES tarjeta_embarque (fila_asiento , columna_asiento , piso_asiento)
         ON DELETE CASCADE ON UPDATE CASCADE,

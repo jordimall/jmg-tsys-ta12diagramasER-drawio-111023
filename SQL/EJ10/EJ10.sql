@@ -32,7 +32,6 @@ CREATE TABLE partido (
 CREATE TABLE evento (
     id_evento INT AUTO_INCREMENT,
     tipo VARCHAR(20),
-    minuto TIME,
     PRIMARY KEY (id_evento)
 );
 
@@ -51,6 +50,7 @@ CREATE TABLE provocar (
 CREATE TABLE ocurrir (
     evento INT,
     partido INT,
+    minuto TIME,
     FOREIGN KEY (evento)
         REFERENCES evento (id_evento)
         ON DELETE CASCADE ON UPDATE CASCADE,

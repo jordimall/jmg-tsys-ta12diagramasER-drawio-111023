@@ -67,7 +67,7 @@ CREATE TABLE utilizar (
 CREATE TABLE necesitar (
     paso INT,
     ingrediente INT,
-    tipo_medida VARCHAR(10),
+    tipo_medida VARCHAR(20),
     cantidad DOUBLE,
     FOREIGN KEY (paso)
         REFERENCES paso (id_paso)
