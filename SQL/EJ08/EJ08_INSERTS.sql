@@ -9,8 +9,6 @@ insert into cliente (dni, nombre, apellido, direccion, telefono, num_tarjeta_cre
 insert into cliente (dni, nombre, apellido, direccion, telefono, num_tarjeta_credito) values ('91273320O', 'Jakob', 'Fiddiman', '64 Mifflin Park', '688701609', '3529144087004042');
 insert into cliente (dni, nombre, apellido, direccion, telefono, num_tarjeta_credito) values ('51344375M', 'Emma', 'Silman', '1009 Mitchell Street', '618163227', '3534805706334563');
 
-select * from cliente;
-
 insert into tarjeta_embarque (fila_asiento, columna_asiento, piso_asiento, cliente) values (30, 'U', 1, '08616798T');
 insert into tarjeta_embarque (fila_asiento, columna_asiento, piso_asiento, cliente) values (6, 'L', 4, '59917889L');
 insert into tarjeta_embarque (fila_asiento, columna_asiento, piso_asiento, cliente) values (19, 'Q', 1, '45447086L');
@@ -21,8 +19,6 @@ insert into tarjeta_embarque (fila_asiento, columna_asiento, piso_asiento, clien
 insert into tarjeta_embarque (fila_asiento, columna_asiento, piso_asiento, cliente) values (58, 'Z', 2, '17784611N');
 insert into tarjeta_embarque (fila_asiento, columna_asiento, piso_asiento, cliente) values (7, 'X', 2, '91273320O');
 insert into tarjeta_embarque (fila_asiento, columna_asiento, piso_asiento, cliente) values (46, 'W', 4, '51344375M');
-
-select * from tarjeta_embarque;
 
 insert into avion (codigo_avion, num_plazas) values ('OESK', 325);
 insert into avion (codigo_avion, num_plazas) values ('KAEX', 168);
@@ -35,8 +31,6 @@ insert into avion (codigo_avion, num_plazas) values ('DFCP', 409);
 insert into avion (codigo_avion, num_plazas) values ('SDTO', 126);
 insert into avion (codigo_avion, num_plazas) values ('A23', 789);
 
-select * from avion;
-
 insert into aeropuerto (codigo_aeropuerto, nombre, localidad, pais) values ('LFN', 'Triangle North Executive Airport', 'Uva', 'Russia');
 insert into aeropuerto (codigo_aeropuerto, nombre, localidad, pais) values ('OFK', 'Karl Stefan Memorial Airport', 'Mjamaoué', 'Comoros');
 insert into aeropuerto (codigo_aeropuerto, nombre, localidad, pais) values ('MQY', 'Smyrna Airport', 'Fagatogo', 'American Samoa');
@@ -47,8 +41,6 @@ insert into aeropuerto (codigo_aeropuerto, nombre, localidad, pais) values ('QUY
 insert into aeropuerto (codigo_aeropuerto, nombre, localidad, pais) values ('KUU', 'Kullu Manali Airport', 'Bergen', 'Norway');
 insert into aeropuerto (codigo_aeropuerto, nombre, localidad, pais) values ('EIB', 'Eisenach-Kindel Airport', 'Mae Sai', 'Thailand');
 insert into aeropuerto (codigo_aeropuerto, nombre, localidad, pais) values ('MMH', 'Mammoth Yosemite Airport', 'Wanareja', 'Indonesia');
-
-select * from aeropuerto;
 
 insert into vuelo (fecha_salida, hora_salida, fecha_llegada, hora_llegada, avion, aeropuerto_salida, aeropuerto_llegada) values ('2022-07-31', '9:57:49', '2022-07-31', '23:03:50', 'A23', 'LFN', 'BBR');
 insert into vuelo (fecha_salida, hora_salida, fecha_llegada, hora_llegada, avion, aeropuerto_salida, aeropuerto_llegada) values ('2022-06-29', '1:53:58', '2022-06-29', '21:44:29', 'DFCP','OFK', 'DJO');
@@ -61,8 +53,6 @@ insert into vuelo (fecha_salida, hora_salida, fecha_llegada, hora_llegada, avion
 insert into vuelo (fecha_salida, hora_salida, fecha_llegada, hora_llegada, avion, aeropuerto_salida, aeropuerto_llegada) values ('2021-06-22', '22:22:22', '2021-06-22', '23:23:23', 'SDTO','EIB', 'OFK');
 insert into vuelo (fecha_salida, hora_salida, fecha_llegada, hora_llegada, avion, aeropuerto_salida, aeropuerto_llegada) values ('2023-07-20', '15:50:41', '2023-07-20', '19:25:28', 'ZGXN', 'MMH', 'QUY');
 
-select * from vuelo;
-
 insert into reserva (cliente, tarjeta_fila, tarjeta_columna, tarjeta_piso, num_reserva, fecha_reserva) values ('08616798T', 30, 'U', 1, 886, '2021-04-16');
 insert into reserva (cliente, tarjeta_fila, tarjeta_columna, tarjeta_piso, num_reserva, fecha_reserva) values ('59917889L', 6, 'L', 4, 203, '2022-06-29');
 insert into reserva (cliente, tarjeta_fila, tarjeta_columna, tarjeta_piso, num_reserva, fecha_reserva) values ('45447086L', 19, 'Q', 1, 59, '2023-01-15');
@@ -73,8 +63,6 @@ insert into reserva (cliente, tarjeta_fila, tarjeta_columna, tarjeta_piso, num_r
 insert into reserva (cliente, tarjeta_fila, tarjeta_columna, tarjeta_piso, num_reserva, fecha_reserva) values ('17784611N', 58, 'Z', 2, 32, '2021-09-30');
 insert into reserva (cliente, tarjeta_fila, tarjeta_columna, tarjeta_piso, num_reserva, fecha_reserva) values ('91273320O', 7, 'X', 2, 192, '2020-12-31');
 insert into reserva (cliente, tarjeta_fila, tarjeta_columna, tarjeta_piso, num_reserva, fecha_reserva) values ('51344375M', 46, 'W', 4, 60, '2021-03-24');
-
-select * from reserva;
 
 insert into embarca (tarjeta_fila, tarjeta_columna, tarjeta_piso, vuelo) values (30, 'U', 1, 1);
 insert into embarca (tarjeta_fila, tarjeta_columna, tarjeta_piso, vuelo) values (6, 'L', 4, 2);
@@ -87,4 +75,12 @@ insert into embarca (tarjeta_fila, tarjeta_columna, tarjeta_piso, vuelo) values 
 insert into embarca (tarjeta_fila, tarjeta_columna, tarjeta_piso, vuelo) values (7, 'X', 2, 9);
 insert into embarca (tarjeta_fila, tarjeta_columna, tarjeta_piso, vuelo) values (46, 'W', 4, 10);
 
-select * from embarca;
+
+-- muestra los aviones con 450 asientos o mas
+select * from avion where num_plazas >= 450;
+
+-- aumenta el numero de plazas del resto de los aviones
+update avion set num_plazas = num_plazas+200 where num_plazas < 450;
+
+-- eliminar el avion con menos plazas
+delete from avion order by num_plazas limit 1;

@@ -14,8 +14,6 @@ insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajad
 insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('84914538F', 'Nisse', 'Fairpool', '9 Rutledge Terrace', '887-46-8020', '08-6295238', '633350432', '43309039D');
 insert into empleado (dni, nombre, apellidos, direccion, num_SS, codigo_trabajador, telefono, jefe) values ('17184708R', 'Salomi', 'Verissimo', '43500 Del Sol Parkway', '570-41-6878', '74-5372189', '639785362', '43309039D');
 
-select * from empleado;
-
 insert into departamento (nombre, coordinador) values ('Business Development', '52856433C');
 insert into departamento (nombre, coordinador) values ('Training', '07349694Y');
 insert into departamento (nombre, coordinador) values ('Research and Development', '52042543W');
@@ -26,8 +24,6 @@ insert into departamento (nombre, coordinador) values ('Services', '69401067O');
 insert into departamento (nombre, coordinador) values ('Product Management', '80941377V');
 insert into departamento (nombre, coordinador) values ('Support', '92365447Y');
 insert into departamento (nombre, coordinador) values ('Sales', '14407313W');
-
-select * from departamento;
 
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Biostatistician IV', '2020-01-17', null, '52856433C');
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer Analyst III', '2023-03-24', null, '43309039D');
@@ -45,8 +41,6 @@ insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('P
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2023-07-31', null, '69838924M');
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2024-02-15', null, '84914538F');
 insert into contrato (categoria, fecha_inicio, fecha_final, empleado) values ('Programmer', '2025-04-09', null, '17184708R');
-
-select * from contrato;
 
 insert into nomina (fecha, salario, contrato) values ('2023-07-01', 1000, 1);
 insert into nomina (fecha, salario, contrato) values ('2022-08-01', 1500, 2);
@@ -66,8 +60,6 @@ insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 14);
 insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 15);
 insert into nomina (fecha, salario, contrato) values ('2025-09-01', 1800, 16);
 
-select * from nomina;
-
 insert into trabaja (empleado, departamento) values ('52856433C', '1');
 insert into trabaja (empleado, departamento) values ('07349694Y', '2');
 insert into trabaja (empleado, departamento) values ('52042543W', '3');
@@ -84,4 +76,21 @@ insert into trabaja (empleado, departamento) values ('69838924M', '4');
 insert into trabaja (empleado, departamento) values ('84914538F', '4');
 insert into trabaja (empleado, departamento) values ('17184708R', '4');
 
-select * from trabaja;
+
+-- muestra todos los contratos que ha tenido el empleado con dni '52042543W';
+select * from contrato where empleado = '52042543W';
+
+-- determina una fecha final para el contrato del empleado con dni '52042543W';
+update contrato set fecha_final = '2025-12-31' where empleado = '52042543W';
+
+-- elimina el primer contrato del empleado con dni '52042543W';
+delete from contrato where empleado = '52042543W' and categoria = 'Cost Accountant';
+
+-- muestra el departamento de ventas
+select * from departamento where nombre = 'Sales';
+
+-- actualiza el coordinador del departamento de ventas 
+update departamento set coordinador = '17184708R' where nombre= 'Sales';
+
+-- elimina a un empleado
+delete from empleado where dni = '84914538F';
